@@ -28,7 +28,6 @@ public class EstatisticasSimplesTest {
 	double mediaDeValores = EstatisticasSimples.calculaMedia(valoresDeEntrada);
 	assertEquals(7, mediaDeValores, 0);
 	}
-
 	@Test
 	public void deveEfetuarTodosCalculosParaDoisValores() {
 	double valoresDeEntrada[] = {9,5};
@@ -38,26 +37,26 @@ public class EstatisticasSimplesTest {
 	@Test
 	public void deveCalcularValorMinimoEntreDezValores() {
 	double valoresDeEntrada[] = {1024,512,254,128,64,32,16,2,4,8};
-	double valorMinimoCalculado = EstatisticasSimples.calculaValorMinimoDez(valoresDeEntrada);
+	double valorMinimoCalculado = EstatisticasSimples.calculaValorMinimo(valoresDeEntrada);
 	assertEquals(2, valorMinimoCalculado, 0);
 	}
 	@Test
 	public void deveCalcularValorMaximoEntreDezValores() {
 	double valoresDeEntrada[] = {1024,512,254,128,64,32,16,2,4,8};
-	double valorMaximoCalculado = EstatisticasSimples.calculaValorMaximoDez(valoresDeEntrada);
+	double valorMaximoCalculado = EstatisticasSimples.calculaValorMaximo(valoresDeEntrada);
 	assertEquals(1024, valorMaximoCalculado, 0);
 	}
 	@Test
 	public void deveCalcularMediaEntreDezValores() {
 	double valoresDeEntrada[] = {1024,512,254,128,64,32,16,2,4,8};
-	double valorMediaCalculado = EstatisticasSimples.calculaValorMediaDez(valoresDeEntrada);
+	double valorMediaCalculado = EstatisticasSimples.calculaMedia(valoresDeEntrada);
 	assertEquals(204.4, valorMediaCalculado, 0);
 	}
 	@Test
 	public void deveEfetuarTodosCalculosParaDezValores() {
 	double valoresDeEntrada[] = {1024,512,254,128,64,32,16,2,4,8};
-	double valoresDeSaida[] = EstatisticasSimples.calculaDez(valoresDeEntrada);
-	assertArrayEquals(new double[] {2,1024,204.4}, valoresDeSaida, 0);
+	double valoresDeSaida[] = EstatisticasSimples.calcula(valoresDeEntrada);
+	assertArrayEquals(new double[] {2,1024,10,204.4}, valoresDeSaida, 0);
 	}
 }
 
